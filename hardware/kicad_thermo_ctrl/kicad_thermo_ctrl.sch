@@ -357,28 +357,6 @@ Wire Wire Line
 	7750 2500 7550 2500
 Connection ~ 7550 2500
 $Comp
-L Device:LED L7
-U 1 1 5E1DD584
-P 2550 1250
-F 0 "L7" V 2589 1133 50  0000 R CNN
-F 1 "LED" V 2498 1133 50  0000 R CNN
-F 2 "LED_THT:LED_D3.0mm" H 2550 1250 50  0001 C CNN
-F 3 "~" H 2550 1250 50  0001 C CNN
-	1    2550 1250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR0103
-U 1 1 5E1DD58A
-P 2550 1000
-F 0 "#PWR0103" H 2550 850 50  0001 C CNN
-F 1 "+5V" H 2565 1173 50  0000 C CNN
-F 2 "" H 2550 1000 50  0001 C CNN
-F 3 "" H 2550 1000 50  0001 C CNN
-	1    2550 1000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Transistor_BJT:BC337 T_L7
 U 1 1 5E1DD590
 P 2450 1750
@@ -387,28 +365,6 @@ F 1 "BC337" H 2641 1705 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2650 1675 50  0001 L CIN
 F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 2450 1750 50  0001 L CNN
 	1    2450 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 5E1DD596
-P 2550 2450
-F 0 "#PWR0104" H 2550 2200 50  0001 C CNN
-F 1 "GND" H 2555 2277 50  0000 C CNN
-F 2 "" H 2550 2450 50  0001 C CNN
-F 3 "" H 2550 2450 50  0001 C CNN
-	1    2550 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R_E_L7
-U 1 1 5E1DD59C
-P 2550 2200
-F 0 "R_E_L7" H 2620 2246 50  0000 L CNN
-F 1 "500" H 2620 2155 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 2480 2200 50  0001 C CNN
-F 3 "~" H 2550 2200 50  0001 C CNN
-	1    2550 2200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -422,14 +378,6 @@ F 3 "~" H 1950 1750 50  0001 C CNN
 	1    1950 1750
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2550 1400 2550 1550
-Wire Wire Line
-	2550 1950 2550 2050
-Wire Wire Line
-	2550 2350 2550 2450
-Wire Wire Line
-	2550 1000 2550 1100
 Wire Wire Line
 	2100 1750 2250 1750
 Text Label 5300 1750 2    60   ~ 0
@@ -728,10 +676,10 @@ Wire Wire Line
 Wire Wire Line
 	4450 4600 4800 4600
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0113
 U 1 1 5E3D22C6
 P 6200 4650
-F 0 "#PWR?" H 6200 4400 50  0001 C CNN
+F 0 "#PWR0113" H 6200 4400 50  0001 C CNN
 F 1 "GND" H 6205 4477 50  0000 C CNN
 F 2 "" H 6200 4650 50  0001 C CNN
 F 3 "" H 6200 4650 50  0001 C CNN
@@ -744,4 +692,94 @@ Wire Wire Line
 	6200 4600 6250 4600
 Wire Wire Line
 	6200 4500 6250 4500
+Wire Wire Line
+	2550 1000 2550 1100
+Wire Wire Line
+	2550 1400 2550 1550
+$Comp
+L power:+5V #PWR0103
+U 1 1 5E1DD58A
+P 2550 1000
+F 0 "#PWR0103" H 2550 850 50  0001 C CNN
+F 1 "+5V" H 2565 1173 50  0000 C CNN
+F 2 "" H 2550 1000 50  0001 C CNN
+F 3 "" H 2550 1000 50  0001 C CNN
+	1    2550 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED L7
+U 1 1 5E1DD584
+P 2550 1250
+F 0 "L7" V 2589 1133 50  0000 R CNN
+F 1 "LED" V 2498 1133 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 2550 1250 50  0001 C CNN
+F 3 "~" H 2550 1250 50  0001 C CNN
+	1    2550 1250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2550 2350 2550 2450
+Wire Wire Line
+	2550 1950 2550 2050
+$Comp
+L Device:R R_E_L7
+U 1 1 5E1DD59C
+P 2550 2200
+F 0 "R_E_L7" H 2620 2246 50  0000 L CNN
+F 1 "500" H 2620 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2480 2200 50  0001 C CNN
+F 3 "~" H 2550 2200 50  0001 C CNN
+	1    2550 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5E1DD596
+P 2550 2450
+F 0 "#PWR0104" H 2550 2200 50  0001 C CNN
+F 1 "GND" H 2555 2277 50  0000 C CNN
+F 2 "" H 2550 2450 50  0001 C CNN
+F 3 "" H 2550 2450 50  0001 C CNN
+	1    2550 2450
+	1    0    0    -1  
+$EndComp
+Text Label 2550 1500 0    50   ~ 0
+L7_collector
+Text Label 2550 2050 0    50   ~ 0
+L7_emitter
+Text Label 2100 1750 0    50   ~ 0
+L7_base
+Text Label 4450 1550 0    50   ~ 0
+L6_collector
+Text Label 4450 2050 0    50   ~ 0
+L6_emitter
+Text Label 4000 1750 0    50   ~ 0
+L6_base
+Text Label 6200 1550 0    50   ~ 0
+L5_collector
+Text Label 6200 2050 0    50   ~ 0
+L5_emitter
+Text Label 5750 1750 0    50   ~ 0
+L5_base
+Text Label 2550 2450 0    50   ~ 0
+GND
+Text Label 4450 2450 0    50   ~ 0
+GND
+Text Label 6200 2450 0    50   ~ 0
+GND
+Text Label 7550 2250 0    50   ~ 0
++5V
+Text Label 6200 1050 0    50   ~ 0
++5V
+Text Label 4450 1100 0    50   ~ 0
++5V
+Text Label 2550 1050 0    50   ~ 0
++5V
+Text Label 4300 3300 0    50   ~ 0
+GND
+Text Label 4100 4300 0    50   ~ 0
+GND
+Text Label 7550 3200 0    50   ~ 0
+GND
 $EndSCHEMATC

@@ -673,19 +673,13 @@ U 1 1 5E3615C0
 P 6450 4500
 F 0 "power_ctrl1" H 6530 4492 50  0000 L CNN
 F 1 "Conn_01x02" H 6530 4401 50  0000 L CNN
-F 2 "" H 6450 4500 50  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 6450 4500 50  0001 C CNN
 F 3 "~" H 6450 4500 50  0001 C CNN
 	1    6450 4500
 	1    0    0    -1  
 $EndComp
-Text Label 5900 4500 2    60   ~ 0
+Text Label 6200 4500 2    60   ~ 0
 8
-Text Label 5900 4600 2    60   ~ 0
-9(**)
-Wire Wire Line
-	6250 4500 5900 4500
-Wire Wire Line
-	6250 4600 5900 4600
 $Comp
 L Connector_Generic:Conn_01x04 i2c1
 U 1 1 5E389CA3
@@ -733,4 +727,21 @@ Wire Wire Line
 	4450 4500 4800 4500
 Wire Wire Line
 	4450 4600 4800 4600
+$Comp
+L power:GND #PWR?
+U 1 1 5E3D22C6
+P 6200 4650
+F 0 "#PWR?" H 6200 4400 50  0001 C CNN
+F 1 "GND" H 6205 4477 50  0000 C CNN
+F 2 "" H 6200 4650 50  0001 C CNN
+F 3 "" H 6200 4650 50  0001 C CNN
+	1    6200 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 4650 6200 4600
+Wire Wire Line
+	6200 4600 6250 4600
+Wire Wire Line
+	6200 4500 6250 4500
 $EndSCHEMATC
